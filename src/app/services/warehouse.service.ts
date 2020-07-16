@@ -14,14 +14,15 @@ export class WarehouseService {
 
   getWarehouses(): Observable<Warehouse[]> {
     const url = `${this.warehouseUrl}/warehouses`;
-    return this.http.get<Warehouse[]>(url).pipe(map((data) => {
+    return this.http.get<Warehouse[]>(url);
+   /* return this.http.get<Warehouse[]>(url).pipe(map((data) => {
       data.sort((a, b) => {
         if (a.name < b.name) {
           return -1;
         }
       });
       return data;
-    }));
+    }));*/
   }
 
   getWarehouse(id: string): Observable<Warehouse> {

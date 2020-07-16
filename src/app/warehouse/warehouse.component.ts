@@ -31,11 +31,12 @@ export class WarehouseComponent implements OnInit {
     });
   }
 
-
   moveItemToWarehouse(warehouseId: string, itemId: string): void {
     if (this.selected) {
-      this.warehouseService.moveItemToWarehouse(warehouseId, itemId).then(() => {
+      this.warehouseService.moveItemToWarehouse(warehouseId, itemId).then((response) => {
+        console.log(response);
         this.getWarehouses();
+        this.getEmptyCapacity();
       });
     }
     else {

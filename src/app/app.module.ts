@@ -13,7 +13,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatDividerModule} from '@angular/material/divider';
 
-//import { AppRoutingModule } from './app-routing.module';
+// import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WarehouseComponent } from './warehouse/warehouse.component';
@@ -25,7 +25,7 @@ import { WarehouseComponent } from './warehouse/warehouse.component';
   ],
   imports: [
     BrowserModule,
-    //AppRoutingModule,
+    // AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatTableModule,
