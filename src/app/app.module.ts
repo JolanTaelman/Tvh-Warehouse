@@ -6,8 +6,12 @@ import { MatTableModule, } from '@angular/material/table';
 import { MatButtonModule, } from '@angular/material/button';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
-import {MatDividerModule} from '@angular/material/divider';
 import {MatSelectModule} from '@angular/material/select';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatDividerModule} from '@angular/material/divider';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,8 +32,12 @@ import { WarehouseComponent } from './warehouse/warehouse.component';
     MatButtonModule,
     MatTabsModule,
     MatCardModule,
-    MatDividerModule,
-    MatSelectModule
+    MatSelectModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatExpansionModule,
+    MatBadgeModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

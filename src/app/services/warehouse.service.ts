@@ -31,7 +31,11 @@ export class WarehouseService {
 
   moveItemToWarehouse(warehouseId: string, itemId: string): Promise<object> {
     const url = `${this.warehouseUrl}/warehouses/${warehouseId}/${itemId}`;
-    // this.http.post(url, {}).toPromise().then(() => console.log('Item moved'));
     return this.http.post(url, {}).toPromise();
+  }
+
+  getEmptyCapacity(): Observable<any> {
+    const url = `${this.warehouseUrl}/capacity`;
+    return this.http.get(url);
   }
 }

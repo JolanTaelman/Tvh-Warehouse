@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WarehouseService } from '../services/warehouse.service';
 import { Warehouse } from '../model/warehouse.model';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-warehouse',
@@ -9,12 +8,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['./warehouse.component.css']
 })
 export class WarehouseComponent implements OnInit {
-  warehouseColumns: string[] = ['name', 'capacity', 'filled'];
+  CapacityColumns: string[] = ['Name', 'Capacity'];
   ItemColums: string[] = ['Name', 'Transfer'];
 
   warehouses: Warehouse[];
-  // warehouses: Observable<Warehouse[]>;
-
+  capacity: any;
   selected = null;
 
   constructor(private warehouseService: WarehouseService) {
@@ -22,15 +20,17 @@ export class WarehouseComponent implements OnInit {
 
   ngOnInit(): void {
     this.getWarehouses();
+    this.getEmptyCapacity();
   }
   getWarehouses(): void {
     this.warehouseService.getWarehouses().subscribe(warehouses => this.warehouses = warehouses);
-
+  }
+  getEmptyCapacity(): void {
+    this.warehouseService.getEmptyCapacity().subscribe((capacity) => {
+      this.capacity = capacity;
+    });
   }
 
-  consoleLog(element): void {
-    console.log(element);
-  }
 
   moveItemToWarehouse(warehouseId: string, itemId: string): void {
     if (this.selected) {

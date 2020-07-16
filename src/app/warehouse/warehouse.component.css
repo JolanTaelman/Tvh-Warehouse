@@ -1,7 +1,6 @@
-
 table {
     width: 100%;
-  }
+}
 
 .main {
     width: 70%;
@@ -10,25 +9,37 @@ table {
     padding-top: 5%;
 }
 
-.warehouseCard{
-    margin: 1%;    
+.warehouseCard {
+    margin: 1%;
     width: 30%;
     background-color: lightgrey;
 }
 
-.itemList{
+.itemList {
     margin: 1%;
 }
 
-.mat-table{
+.mat-table {
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
-.BigFont{
+.BigFont {
     font-size: x-large;
-
 }
 
-.warehouseStats{
+.warehouseStats {
     display: flex;
 }
+
+.example-icon {
+    padding: 0 14px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.mat-toolbar-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;}
