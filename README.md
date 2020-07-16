@@ -1,27 +1,35 @@
-# TvhFrontend
+# Frontend
+Angular site staat live op github pages, bereikbaar via link: https://jolantaelman.github.io/Tvh-Warehouse/Tvh-Warehouse/
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
+# Backend
+Node.js staat op github via link https://github.com/JolanTaelman/TVH-server, is gehost op Heroku via link https://tvh-backend.herokuapp.com/.
 
-## Development server
+# Database
+Mongo database staat gehost via Mlab.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Routes
+De bestaande routes zijn:
 
-## Code scaffolding
+## /warehouses
+GET: Returns list of warehouses with stock.
+POST: Creates a warehouse with provided arguments (name, capacity)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## /warehouses/:warehouseID
+GET: Returns the warehouse that matches the provided ID.
+PUT: Updates the matched warehouse.
+POST: Adds an item to the matched warehouse with the provided arguments (name)
+DELETE: Deletes the matched warehouse.
 
-## Build
+## /warehouses/:warehouseID/items
+GET: Returns a list of all items from the matches warehouse.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## /warehouses/:warehouseID/:itemID
+DELETE: Deletes matched item from matched Warehouse
+POST: Moves matched item to matched warehouse
 
-## Running unit tests
+## /capacity
+GET: Returns all free capacity and a list of warehouses with free capacity
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## /item/:itemID
+GET: Returns matched item
+DELETE: Deletes matched item.
